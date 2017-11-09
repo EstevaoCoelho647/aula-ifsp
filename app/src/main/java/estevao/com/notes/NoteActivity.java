@@ -1,7 +1,5 @@
 package estevao.com.notes;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -26,12 +24,18 @@ public class NoteActivity extends AppCompatActivity{
         setContentView(R.layout.activity_note);
 
         final EditText edtTextTitle =
-                findViewById(R.id.edt_title);
+                    findViewById(R.id.edt_title);
 
         final EditText edtTextDescription =
                 findViewById(R.id.edt_description);
 
         Button button = findViewById(R.id.button);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            Note note = (Note) extras.get("noteExtra");
+
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

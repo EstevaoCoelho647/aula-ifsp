@@ -1,10 +1,12 @@
 package estevao.com.notes;
 
+import java.io.Serializable;
+
 /**
  * Created by estevao on 08/11/17.
  */
 
-public class Note {
+public class Note implements Serializable{
     private String title;
     private String description;
 
